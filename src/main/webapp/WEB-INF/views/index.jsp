@@ -18,7 +18,7 @@
 				<option>en</option>
 			</select>
 			<button type="submit">Change</button>
-		</form>
+		</form>  
 
 <!-- 	<h1> -->
 <%-- 		<spring:message code="hello"></spring:message> --%>
