@@ -70,6 +70,32 @@
 	
   <div class="container" style="height: 100px;">  
   </div>	
+  
+  
+  <script type="text/javascript">
+  		$("#id").blur(function(){
+		var id=$("#id").val();
+
+		$.ajax({
+			type : "POST",
+			url: "./memberIdCheck",
+			data{
+				id:id
+				},
+				sucess:function(data){
+					if(data){
+						arert("중복된 ID");
+						$("#id").val("");
+						
+					}else{
+						arert("사용 가능 ID")
+						}
+			});		
+  	  	});
+
+  </script>
+  
+  
 		
 </body>
 

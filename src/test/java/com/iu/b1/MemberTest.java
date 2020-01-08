@@ -1,6 +1,6 @@
 package com.iu.b1;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,17 +14,35 @@ class MemberTest {
 	@Autowired
 	private MemberRepository memberRepository;
 	
-	@Test
+	//@Test
 	void test() {
 	
-		MemberVO memberVO = memberRepository.findById("iu99").get();
+//		Optional<MemberVO> opt = memberRepository.findById("iu99");
+//		MemberVO memberVO = opt.get();
+//		
+//		System.out.println("NAME = "+memberVO.getName());
+//		System.out.println("FNAME = "+memberVO.getFilesVO().getFname());
+//		System.out.println("FILE ID = "+memberVO.getFilesVO().getMemberVO().getId());
 		
-		System.out.println(memberVO.getId());
-		System.out.println();
+//		MemberVO memberVO = memberRepository.findById("iu99").get();
+//		
+//		System.out.println(memberVO.getId());
+//		System.out.println();
+		
+		MemberVO memberVO = new MemberVO();
+		
+		
+		memberVO.setId("dd");
+		memberVO.setPw("ds");
+		memberVO.setPw2("ds");
+		memberVO.setName("sda");
+		memberVO.setEmail("sdd");
+		
+		memberRepository.save(memberVO);
+		
 	}
 	
-	
-	
+
 	
 
 }

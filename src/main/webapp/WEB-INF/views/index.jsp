@@ -12,13 +12,13 @@
 <body>
 <c:import url="./template/nav.jsp"></c:import>
 <div class="container">
-		<form action="./">
-			<select name="lang">
-				<option>ko</option>
-				<option>en</option>
-			</select>
-			<button type="submit">Change</button>
-		</form>  
+<!-- 		<form action="./"> -->
+<!-- 			<select name="lang"> -->
+<!-- 				<option>ko</option> -->
+<!-- 				<option>en</option> -->
+<!-- 			</select> -->
+<!-- 			<button type="submit">Change</button> -->
+<!-- 		</form>   -->
 
 <!-- 	<h1> -->
 <%-- 		<spring:message code="hello"></spring:message> --%>
