@@ -59,17 +59,21 @@
 		
 		<div>저장 사진</div>
 		<div>
-			<img alt="" src="../upload/${files.fname}">
+			<img alt="" src="../upload/${member.filesVO.fname}">
 		</div>
 		
 		<a class="btn btn-primary" href="./memberFileDown?id=${files.id}">FileDown</a>
-		
-		
+
 	</form>
 	
+  		<a class="btn btn-primary" href="${pageContext.request.contextPath}/member/memberUpdate" style="margin-top: 50px;">정보 수정하기</a>
+  		<a href="./memberDelete" class="btn btn-danger" style="margin-top: 50px;">회원 탈퇴하기</a>
+
   <div class="container" style="height: 100px;">
   
   </div>
+  
+  
 </div>
 </body>
 
