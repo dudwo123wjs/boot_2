@@ -22,6 +22,38 @@ public class NoticeFIlesVO {
 	@ManyToOne
 	@JoinColumn(name = "num")
 	private NoticeVO noticeVO;
+
+	public int getFnum() {
+		return fnum;
+	}
+
+	public void setFnum(int fnum) {
+		this.fnum = fnum;
+	}
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getOname() {
+		return oname;
+	}
+
+	public void setOname(String oname) {
+		this.oname = oname;
+	}
+
+	public NoticeVO getNoticeVO() {
+		return noticeVO;
+	}
+
+	public void setNoticeVO(NoticeVO noticeVO) {
+		this.noticeVO = noticeVO;
+	}
 	
 	
 }
