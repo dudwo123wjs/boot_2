@@ -8,8 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
-@Entity
-//@MappedSuperclass
+import org.hibernate.annotations.CreationTimestamp;
+
+@MappedSuperclass
 public class BoardVO {
 
 	
@@ -19,6 +20,7 @@ public class BoardVO {
 	private String title;
 	private String writer;
 	private String contents;
+	@CreationTimestamp
 	private Date regDate;
 	private int hit;
 	

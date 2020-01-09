@@ -1,9 +1,6 @@
 package com.iu.b1.Member;
 
-import java.nio.file.Files;
-
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

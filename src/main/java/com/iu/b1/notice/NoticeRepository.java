@@ -10,6 +10,6 @@ public interface NoticeRepository extends JpaRepository<NoticeVO, Integer>{
 	//List 앞 public 을 안써줄시 interface이기 때문에 자동적으로 불러오게 된다.
 	//select * from notice order where num > ? by num desc
 	//https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.entity-persistence
-	List<NoticeVO> findByGreaterThanOrderByNumDesc(int num)throws Exception;
+	List<NoticeVO> findByNumGreaterThanOrderByNumDesc(int num)throws Exception;
 	
 }

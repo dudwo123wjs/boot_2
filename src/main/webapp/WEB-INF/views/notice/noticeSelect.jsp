@@ -79,6 +79,11 @@
 
 			</div>
 		</div>	
+		
+		<div>저장 사진 : </div>
+		<div>
+			<img alt="" src="../upload/${member.filesVO.fname}">
+		</div>
 	
 		
 <!-- 		<div>저장 사진</div> -->
@@ -95,7 +100,7 @@
 					class="btn btn-info"
 					style="color: blue; background: black; border: 1px solid transparent;">수정</a>
 
-				<a href="./notice/noticeDelete?num=${vo.num}"
+				<a href="./noticeDelete?num=${vo.num}"
 					class="btn btn-info"
 					style="color: red; background: black; border: 1px solid transparent;">삭제</a>
 

@@ -25,6 +25,7 @@ public class MemberService {
 //---------------------------------------------------------------------------		
 	public void memberDelete(MemberVO memberVO)throws Exception{
 		memberRepository.deleteById(memberVO.getId());
+		
 	}
 	
 	

@@ -15,6 +15,12 @@
   	<h2>Notice List</h2>
   
   </div>
+  
+  
+  <div class="container" style="height: 50px;">
+  
+  
+  </div>
 
 	<div class="container">
 		<table class="table table-hover">
@@ -24,6 +30,7 @@
 				<td>writer</td>
 				<td>regDate</td>
 				<td>hit</td>
+				<td></td>
 			</tr>
 
 			<c:forEach items="${list}" var="vo">
@@ -37,18 +44,34 @@
 					<td>${vo.hit}</td>
 				</tr>
 			</c:forEach>
-
 		</table>
-
 	</div>
+
+		
+		
+	<div class="container" style="margin-top: 50px;">
+			<c:if test= "${not empty member}"> 
+				<a href="${pageContext.request.contextPath}/notice/noticeWrite"
+					class="btn btn-info"
+					style="color: blue; background: black; border: 1px solid transparent;">작성</a>
+			</c:if>
+
+			<a href="${pageContext.request.contextPath}/" class="btn btn-info"
+				style="color: orange; background: black; border: 1px solid transparent;">홈페이지 이동</a>
+
+	</div>	
+
+
+
+
+
+
 
 
 
   <div class="container" style="height: 50px;">
   
   </div> 
-
-
 
 </body>
 

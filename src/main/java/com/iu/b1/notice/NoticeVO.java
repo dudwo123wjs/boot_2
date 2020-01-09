@@ -18,5 +18,13 @@ public class NoticeVO extends BoardVO{
 
 	@OneToMany(mappedBy = "noticeVO", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<NoticeFIlesVO> noticeFIlesVOs;
+
+	public List<NoticeFIlesVO> getNoticeFIlesVOs() {
+		return noticeFIlesVOs;
+	}
+
+	public void setNoticeFIlesVOs(List<NoticeFIlesVO> noticeFIlesVOs) {
+		this.noticeFIlesVOs = noticeFIlesVOs;
+	}
 	
 }

@@ -38,15 +38,14 @@
 			</div>
 
 
-			<input type="button" class="btn" value="add file" id="add">
-			<div id="files" class="col-sm-12"></div>
-
-
-			<button class="btn btn-primary">submit</button>
+			 <div class="row" >
+		    	<input type="button"  class="btn btn-info col-sm-3" id="add" value="ADD FILE">
+		    	<div id="files" class="col-sm-12"></div>
+		    </div>
+		    
+		    <button class="btn btn-primary">글쓰기</button>
+		    
 		</form:form>
-
-
-
 	</div>
 
 
