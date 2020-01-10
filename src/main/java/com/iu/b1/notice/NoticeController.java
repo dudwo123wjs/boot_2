@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.iu.b1.Member.MemberFilesVO;
+import com.iu.b1.Member.MemberVO;
+
 @Controller
 @RequestMapping("/notice/**")
 public class NoticeController {
@@ -80,7 +83,6 @@ public class NoticeController {
 		return mv;
 	}
 	
-	
 //---------------------------------------------------------------------------	
 	@PostMapping("noticeWrite")
 	public String noticeWrite(NoticeVO noticeVO, List<MultipartFile> files)throws Exception{
@@ -101,7 +103,24 @@ public class NoticeController {
 	
 	
 //---------------------------------------------------------------------------
-	
+	@GetMapping("noticeFileDown")
+	public ModelAndView noticeFileDown(NoticeFIlesVO noticeFIlesVO)throws Exception{
+		ModelAndView mv = new ModelAndView();
+		NoticeVO noticeVO = new NoticeVO();
+		noticeVO.setNum(noticeVO.getNum());
+		noticeFIlesVO = noticeService.getImg(noticeVO);
+		if(noticeFIlesVO != null) {
+			mv.addObject("noticefiles", noticeFIlesVO);
+			mv.addObject("path", "upload");
+			mv.setViewName("fileDown");			
+		}else {
+			mv.addObject("message", "NO Image File");
+			mv.addObject("path", "./noticeList");
+			mv.setViewName("common/result");
+		}
+		
+		return mv;
+	}
 	
 	
 }

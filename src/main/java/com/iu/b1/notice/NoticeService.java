@@ -7,7 +7,6 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
 import com.iu.b1.util.FilePathGenerator;
 import com.iu.b1.util.FileSaver;
 
@@ -23,6 +22,9 @@ public class NoticeService {
 	private FilePathGenerator filePathGenerator;
 	@Autowired
 	private FileSaver fileSaver;
+	@Autowired
+	private NoticeFIlesVORepository noticeFIlesVORepository;
+	
 
 //---------------------------------------------------------------------------		
 	public List<NoticeVO> noticeList()throws Exception{
@@ -37,8 +39,8 @@ public class NoticeService {
 	//---------------------------------------------------------------------------	
 	public NoticeVO noticeDelete(NoticeVO noticeVO) throws Exception{
 		noticeRepository.deleteById(noticeVO.getNum());
-		return noticeRepository.findById(noticeVO.getNum()).get();
 		
+		return noticeRepository.findById(noticeVO.getNum()).get();	
 	}
 	//---------------------------------------------------------------------------		
 	public void boardWrite(NoticeVO noticeVO, List<MultipartFile> files)throws Exception{
@@ -75,7 +77,12 @@ public class NoticeService {
 				noticeRepository.save(noticeVO);	
 		}		
 	//---------------------------------------------------------------------------	
+	public NoticeFIlesVO getImg(NoticeVO noticeVO)throws Exception{
+		NoticeFIlesVO noticeFIlesVO = new NoticeFIlesVO();
+		noticeFIlesVO.getNoticeVO().setNum(noticeVO.getNum());
 		
+		return noticeFIlesVORepository.findById(noticeFIlesVO.getFnum()).get();
+	}
 		
 		
 	//---------------------------------------------------------------------------	

@@ -27,7 +27,7 @@
 
 			<div class="form-group">
 				<h3>writer</h3>
-				<form:input path="writer" class="form-control" id="writer" />
+				<form:input path="writer" class="form-control" id="writer" readonly="true" value=" ${member.id}"/>
 				<form:errors path="writer" />
 			</div>
 
@@ -36,16 +36,18 @@
 				<form:textarea path="contents" class="form-control" id="contents" />
 				<form:errors path="contents" />
 			</div>
-
-
+ 
 			 <div class="row" >
-		    	<input type="button"  class="btn btn-info col-sm-3" id="add" value="ADD FILE">
+		    	<input type="button"  class="btn btn-info" id="add" value="파일 추가" >
 		    	<div id="files" class="col-sm-12"></div>
 		    </div>
 		    
-		    <button class="btn btn-primary">글쓰기</button>
-		    
+			<button class="btn btn-primary">글쓰기</button>
 		</form:form>
+		
+		
+			<a href="${pageContext.request.contextPath}/notice/noticeList" class="btn btn-info"
+			style="color: orange; background: black; border: 1px solid transparent;">목록</a>
 	</div>
 
 

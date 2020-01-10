@@ -12,4 +12,6 @@ public interface NoticeRepository extends JpaRepository<NoticeVO, Integer>{
 	//https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.entity-persistence
 	List<NoticeVO> findByNumGreaterThanOrderByNumDesc(int num)throws Exception;
 	
+	
+	
 }

@@ -79,20 +79,22 @@
 
 			</div>
 		</div>	
-		
-		<div>저장 사진 : </div>
-		<div>
-			<img alt="" src="../upload/${member.filesVO.fname}">
-		</div>
+
 	
 		
-<!-- 		<div>저장 사진</div> -->
-<!-- 		<div> -->
-<%-- 			<img alt="" src="../upload/${files.fname}"> --%>
-<!-- 		</div> -->
+		<div>저장 사진</div>
+		<div>
+			<c:forEach items="${vo.noticeFIlesVOs}" var="f">
+				<img alt="" src="../upload/${f.fname}">
+			</c:forEach> 
+		</div>	
+			
 		
-<%-- 		<a class="btn btn-primary" href="./memberFileDown?id=${files.id}">FileDown</a> --%>		
+		<a class="btn btn-primary" href="./noticeFileDown?fnum=${f.fnum}">FileDown</a>
 		
+		<div class="container" style="height: 50px;">
+
+		</div>
 		
 		<div>
 			<c:if test= "${not empty member}"> 

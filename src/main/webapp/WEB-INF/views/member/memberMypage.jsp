@@ -68,6 +68,8 @@
 	
   		<a class="btn btn-primary" href="${pageContext.request.contextPath}/member/memberUpdate" style="margin-top: 50px;">정보 수정하기</a>
   		<a href="./memberDelete" class="btn btn-danger" style="margin-top: 50px;">회원 탈퇴하기</a>
+  		<a href="${pageContext.request.contextPath}/" class="btn btn-info"
+		style="color: orange; background: black; border: 1px solid transparent; margin-top: 50px;">홈페이지 이동</a>
 
   <div class="container" style="height: 100px;">
   
