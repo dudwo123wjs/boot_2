@@ -37,11 +37,24 @@ public class NoticeService {
 		return noticeRepository.findById(num).get();
 	}
 	//---------------------------------------------------------------------------	
-	public NoticeVO noticeDelete(NoticeVO noticeVO) throws Exception{
-		noticeRepository.deleteById(noticeVO.getNum());
+	public NoticeVO noticeDelete(NoticeVO noticeVO) throws Exception{	
+
 		
-		return noticeRepository.findById(noticeVO.getNum()).get();	
+		noticeRepository.deleteById(noticeVO.getNum());
+	
+		return null;
 	}
+	
+//	public void noticeDelete(NoticeVO noticeVO)throws Exception{
+//		
+//		
+//		noticeRepository.deleteById(noticeVO.getNum());
+//
+//	}
+	
+	
+	
+	
 	//---------------------------------------------------------------------------		
 	public void boardWrite(NoticeVO noticeVO, List<MultipartFile> files)throws Exception{
 		List<NoticeFIlesVO> noticeFilesVOs = null;

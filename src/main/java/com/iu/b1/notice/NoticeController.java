@@ -63,13 +63,12 @@ public class NoticeController {
 	@GetMapping("noticeDelete")
 	public ModelAndView noticeDelete(NoticeVO noticeVO)throws Exception{
 		ModelAndView mv = new ModelAndView();
-		
 		int result = 0;
 		if (noticeService.noticeDelete(noticeVO).getTitle() == "") {
 			result = 1;
 		}
 		String msg = "삭제 실패";
-		if(result > 0) {
+		if(result > 0) {;
 			mv.setViewName("redirect:./noticeList");
 		}else {
 			mv.addObject("msg", msg);
@@ -79,9 +78,24 @@ public class NoticeController {
 		
 		
 		noticeService.noticeDelete(noticeVO);
-		
+		System.out.println("8");
 		return mv;
 	}
+	
+//	@GetMapping("noticeDelete")
+//	public String noticeDelete(HttpSession session)throws Exception{
+//		NoticeVO noticeVO = (NoticeVO)session.getAttribute("notice");
+//		
+//		noticeService.noticeDelete(noticeVO);
+//		session.invalidate();
+//		
+//		return "redirect:../";
+//		
+//	}
+	
+	
+	
+	
 	
 //---------------------------------------------------------------------------	
 	@PostMapping("noticeWrite")

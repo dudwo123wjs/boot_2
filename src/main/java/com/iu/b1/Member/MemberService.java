@@ -19,13 +19,14 @@ public class MemberService {
 	private MemberRepository memberRepository;	
 	@Autowired
 	private FilePathGenerator filePathGenerator;
-	@Autowired	private FileSaver fileSaver;
+	@Autowired	
+	private FileSaver fileSaver;
 	@Autowired
 	private MemberFIlesRepository memberFIlesRepository;
 //---------------------------------------------------------------------------		
 	public void memberDelete(MemberVO memberVO)throws Exception{
-		memberRepository.deleteById(memberVO.getId());
 		
+		memberRepository.deleteById(memberVO.getId());		
 	}
 	
 	
